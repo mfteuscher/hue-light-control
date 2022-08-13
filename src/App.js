@@ -1,9 +1,9 @@
 import './App.css';
 import { useEffect, useState, useRef } from 'react';
-import { AppBar, CardContent, FormControlLabel, Slider, Switch, Toolbar } from '@mui/material';
+import { AppBar, FormControlLabel, Slider, Switch, Toolbar } from '@mui/material';
 import { Container } from '@mui/system';
 import LightbulbCircleIcon from '@mui/icons-material/LightbulbCircle';
-import { Grid, Button, Card, CardActionArea, Typography } from '@mui/material';
+import { Grid, Card, CardActionArea, Typography } from '@mui/material';
 import axios from 'axios';
 import Wheel from '@uiw/react-color-wheel';
 import { hsvaToRgba, rgbaToHsva } from '@uiw/color-convert'
@@ -13,7 +13,7 @@ import LightSelector from './LightSelector';
 
 function App() {
   const hueUsername = 'XWGu880YHThw6OCqZVyafYvXZwVioXsALfhNBiPz';
-  const hueBridgeAPI = `http://192.168.1.126/api/${hueUsername}`;
+  const hueBridgeAPI = `http://192.168.4.25/api/${hueUsername}`;
   const [lights, setLights] = useState([]);
   const [currLight, setCurrLight] = useState(1);
   const [power, setPower] = useState(true);
